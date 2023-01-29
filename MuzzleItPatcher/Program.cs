@@ -65,7 +65,7 @@ public class Program
 				continue;
 			}
 
-			Console.WriteLine($"{dialResponse.Record.EditorID} => {topic.EditorID} :: {topic.Category} && {topic.Subtype}");
+			Console.WriteLine($"{dialResponse.Record.FormKey}:{dialResponse.Record.EditorID} with parent {dialResponse.Record.FormKey}:{topic.EditorID} was modified!");
 
 			var patchedResponse = dialResponse.GetOrAddAsOverride(state.PatchMod);
 
